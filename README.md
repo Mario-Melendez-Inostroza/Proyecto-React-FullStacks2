@@ -1,32 +1,46 @@
-# React + TypeScript + Vite
+# Proyecto React — Desarrollo Full Stack II
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+> Aplicación web en React y TypeScript con navegación entre páginas, desarrollada como trabajo del ramo Desarrollo Full Stack II (Duoc UC).
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Contenido
 
-## React Compiler
+- Páginas de **inicio**, **inicio de sesión** y **registro**
+- Componente de menú de navegación
+- Enrutamiento ligero con [wouter](https://github.com/molefrog/wouter)
+- Despliegue automático a **GitHub Pages** mediante GitHub Actions al hacer push a `main`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Stack
 
-## Expanding the Oxlint configuration
+| Capa | Tecnología |
+| --- | --- |
+| Interfaz | React, TypeScript |
+| Enrutamiento | wouter |
+| Build | Vite |
+| Calidad | Oxlint |
+| CI/CD | GitHub Actions + GitHub Pages |
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Estructura
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```text
+src/
+├── components/   Menu
+└── pages/        home, login, register
+.github/workflows/deploy.yml   despliegue a GitHub Pages
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Cómo ejecutarlo
+
+```bash
+npm install
+npm run dev       # servidor de desarrollo
+npm run build     # build de producción
+npm run lint      # revisión con Oxlint
+npm run preview   # vista previa del build
+```
+
+## Autor
+
+**Mario Meléndez** — Estudiante de Ingeniería en Informática (Duoc UC).
+[Perfil de GitHub](https://github.com/Mario-Melendez-Inostroza)
